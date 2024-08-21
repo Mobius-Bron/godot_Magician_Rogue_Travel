@@ -11,6 +11,7 @@ func _physics_process(delta):
 	
 func move():
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	direction.y *= 0.58
 	velocity = direction * SPEED
 	if direction.x < 0:
 		grahpic.scale.x = -1

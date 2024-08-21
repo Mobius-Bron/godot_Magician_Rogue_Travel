@@ -1,10 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0ps3s2crdcyg"]
+[gd_scene load_steps=7 format=3 uid="uid://d0ps3s2crdcyg"]
 
 [ext_resource type="Script" path="res://player_/player.gd" id="1_7nu5g"]
 [ext_resource type="Texture2D" uid="uid://l4rdijupregj" path="res://test.png" id="1_olkae"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_afyab"]
-size = Vector2(20.2381, 18.5897)
 
 [sub_resource type="Animation" id="Animation_53olv"]
 length = 0.001
@@ -183,15 +180,18 @@ _data = {
 }
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_7nu5g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-0.5, 0.5)
-scale = Vector2(0.84, 1.56)
-shape = SubResource("RectangleShape2D_afyab")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-2.11758e-22, 0)
+scale = Vector2(0.76, 0.36)
+polygon = PackedVector2Array(8, 0, 0, 8, -8, 0, 0, -8)
 
 [node name="Grahpic" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0.5, -14)
 
 [node name="Sprite2D" type="Sprite2D" parent="Grahpic"]
 texture = ExtResource("1_olkae")

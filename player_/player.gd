@@ -4,10 +4,12 @@ extends CharacterBody2D
 @onready var grahpic: Node2D = $Grahpic
 var SPEED = 100.0
 var direction
+
 var weapon_root
 var weapon
+
 var mouse_position
-var label
+var mouse_local_position
 
 func _ready():
 	weapon_root = $weapon_root
@@ -36,10 +38,11 @@ func animation_handler():
 		
 func weapon_aim():
 	mouse_position = get_global_mouse_position()
-	if get_local_mouse_position().x > 0:
+	mouse_local_position = get_local_mouse_position()
+	
+	if mouse_local_position.x > 0:
 		weapon.scale.y = 1
-	elif get_local_mouse_position().x < 0:
+	elif mouse_local_position.x < 0:
 		weapon.scale.y = -1
 	
-	weapon_root.look_at(get_global_mouse_position())
-		
+	weapon_root.look_at(mouse_position)

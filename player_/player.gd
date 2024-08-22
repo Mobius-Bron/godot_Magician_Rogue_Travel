@@ -4,14 +4,23 @@ extends CharacterBody2D
 @onready var grahpic: Node2D = $Grahpic
 var SPEED = 100.0
 var direction
+var weapon_root
+var weapon
+var mouse_position
+var label
+
+func _ready():
+	weapon_root = $weapon_root
+	weapon = $weapon_root/weapon_node
 
 func _physics_process(delta):
 	move()
 	animation_handler()
+	weapon_aim()
 	
 func move():
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	direction.y *= 0.58
+	direction.y *= 0.5
 	velocity = direction * SPEED
 	if direction.x < 0:
 		grahpic.scale.x = -1
@@ -24,3 +33,13 @@ func animation_handler():
 		animation_player.play("idle")
 	else:
 		animation_player.play("run")
+		
+func weapon_aim():
+	mouse_position = get_global_mouse_position()
+	if get_local_mouse_position().x > 0:
+		weapon.scale.y = 1
+	elif get_local_mouse_position().x < 0:
+		weapon.scale.y = -1
+	
+	weapon_root.look_at(get_global_mouse_position())
+		

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0ps3s2crdcyg"]
+[gd_scene load_steps=8 format=3 uid="uid://d0ps3s2crdcyg"]
 
 [ext_resource type="Script" path="res://player_/player.gd" id="1_7nu5g"]
 [ext_resource type="Texture2D" uid="uid://l4rdijupregj" path="res://test.png" id="1_olkae"]
+[ext_resource type="Texture2D" uid="uid://dc431h6dvpf8l" path="res://icon.svg" id="3_1r4pr"]
 
 [sub_resource type="Animation" id="Animation_53olv"]
 length = 0.001
@@ -185,13 +186,13 @@ script = ExtResource("1_7nu5g")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-2.11758e-22, 0)
+position = Vector2(0, 3)
 scale = Vector2(0.76, 0.36)
 polygon = PackedVector2Array(8, 0, 0, 8, -8, 0, 0, -8)
 
 [node name="Grahpic" type="Node2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0.5, -14)
+position = Vector2(0, -11)
 
 [node name="Sprite2D" type="Sprite2D" parent="Grahpic"]
 texture = ExtResource("1_olkae")
@@ -203,3 +204,15 @@ region_rect = Rect2(0, 32, 128, 32)
 libraries = {
 "": SubResource("AnimationLibrary_artx5")
 }
+
+[node name="weapon_root" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -8)
+
+[node name="weapon_node" type="Node2D" parent="weapon_root"]
+position = Vector2(18, 0)
+
+[node name="weapon_test" type="Sprite2D" parent="weapon_root/weapon_node"]
+y_sort_enabled = true
+scale = Vector2(-0.0994471, 0.104694)
+texture = ExtResource("3_1r4pr")

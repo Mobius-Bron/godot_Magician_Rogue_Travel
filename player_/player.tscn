@@ -195,6 +195,7 @@ y_sort_enabled = true
 position = Vector2(0, -11)
 
 [node name="Sprite2D" type="Sprite2D" parent="Grahpic"]
+y_sort_enabled = true
 texture = ExtResource("1_olkae")
 hframes = 4
 region_enabled = true
@@ -207,14 +208,15 @@ libraries = {
 
 [node name="weapon_root" type="Node2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0, -8)
+position = Vector2(0, -13)
 
 [node name="weapon_node" type="Node2D" parent="weapon_root"]
 position = Vector2(16, 0)
 
 [node name="weapon_test" type="Sprite2D" parent="weapon_root/weapon_node"]
 y_sort_enabled = true
-scale = Vector2(0.562916, 0.547561)
+scale = Vector2(0.513, 0.5)
 texture = ExtResource("3_oth3e")
+hframes = 2
 region_enabled = true
-region_rect = Rect2(0, 0, 32, 32)
+region_rect = Rect2(0, 0, 64, 32)

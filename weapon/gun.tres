@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Weapons" load_steps=2 format=3 uid="uid://bpryki77qftq5"]
+
+[ext_resource type="Script" path="res://weapon/weapons.gd" id="1_fs86v"]
+
+[resource]
+script = ExtResource("1_fs86v")
+Name = &"gun"
+Damage = 5.0
+position = Vector2(0, 0)

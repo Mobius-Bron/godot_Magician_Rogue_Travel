@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Weapons" load_steps=2 format=3 uid="uid://x7ckru034jge"]
+
+[ext_resource type="Script" path="res://weapon/weapons.gd" id="1_qpc3i"]
+
+[resource]
+script = ExtResource("1_qpc3i")
+Name = &"fire_magic"
+Damage = 3.0
+id = Vector2(1, 0)
+Position = Vector2(-4, 4)

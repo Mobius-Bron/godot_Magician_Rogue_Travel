@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ihf2u4cwshvu"]
+
+[ext_resource type="Texture2D" uid="uid://dj2x2tm46taj8" path="res://png/子弹.png" id="1_5wg0j"]
+[ext_resource type="Script" path="res://weapon/bullet/butten.gd" id="1_c3p81"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb8d7"]
+
+[node name="bullet" type="CharacterBody2D"]
+script = ExtResource("1_c3p81")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_5wg0j")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.181814, 0.181814)
+shape = SubResource("RectangleShape2D_rb8d7")
+disabled = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

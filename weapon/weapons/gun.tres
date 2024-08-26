@@ -6,4 +6,5 @@
 script = ExtResource("1_fs86v")
 Name = &"gun"
 Damage = 5.0
-Position = Vector2(0, 0)
+id = Vector2(0, 0)
+Position = Vector2(-4, 2)

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var grahpic: Node2D = $Grahpic
-var weapon_dict: Dictionary = {0: preload("res://weapon/gun.tres"), 1: preload("res://weapon/fire_magic.tres")}
+var weapon_dict: Dictionary = {0: preload("res://weapon/weapons/gun.tres"), 1: preload("res://weapon/weapons/fire_magic.tres")}
 var max_weapon_num = 2
 var now_weapon_num = 0
 
@@ -59,5 +59,12 @@ func weapon_change():
 	if Input.is_action_just_pressed("weapon_change"):
 		now_weapon_num = (now_weapon_num + 1) % max_weapon_num
 		#print(now_weapon_num,":",weapon_dict[now_weapon_num].get_position())
-		weapon.frame_coords = weapon_dict[now_weapon_num].get_position()
+		weapon.frame_coords = weapon_dict[now_weapon_num].id
+		weapon.position = weapon_dict[now_weapon_num].Position
+		
+func bullet_position():
+	return weapon_node.get_global_position()
+
+func bullet_rotation():
+	return weapon_node.get_global_rotation()
 		

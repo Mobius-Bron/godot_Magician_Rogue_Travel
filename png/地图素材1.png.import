@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk4n8fhe0cnfc"
-path="res://.godot/imported/地图素材2.png-744d4a62493b5228bad5b7a871bd4b38.ctex"
+uid="uid://by0kwdqush0hk"
+path="res://.godot/imported/地图素材1.png-33aee94556b102aede7fdc8325686c97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://地图素材2.png"
-dest_files=["res://.godot/imported/地图素材2.png-744d4a62493b5228bad5b7a871bd4b38.ctex"]
+source_file="res://png/地图素材1.png"
+dest_files=["res://.godot/imported/地图素材1.png-33aee94556b102aede7fdc8325686c97.ctex"]
 
 [params]
 

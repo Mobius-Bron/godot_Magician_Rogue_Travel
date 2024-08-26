@@ -1,8 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://d0ps3s2crdcyg"]
 
 [ext_resource type="Script" path="res://player_/player.gd" id="1_7nu5g"]
-[ext_resource type="Texture2D" uid="uid://l4rdijupregj" path="res://test.png" id="1_olkae"]
-[ext_resource type="Texture2D" uid="uid://0dgbl4ek4pf6" path="res://武器素材1.png" id="3_oth3e"]
+[ext_resource type="Texture2D" uid="uid://0dgbl4ek4pf6" path="res://png/武器素材1.png" id="3_oth3e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uiyqi"]
+load_path = "res://.godot/imported/test.png-2b0b935732229e5bd5e655f2644b2498.ctex"
 
 [sub_resource type="Animation" id="Animation_53olv"]
 length = 0.001
@@ -196,7 +198,7 @@ position = Vector2(0, -11)
 
 [node name="Sprite2D" type="Sprite2D" parent="Grahpic"]
 y_sort_enabled = true
-texture = ExtResource("1_olkae")
+texture = SubResource("CompressedTexture2D_uiyqi")
 hframes = 4
 region_enabled = true
 region_rect = Rect2(0, 32, 128, 32)
@@ -215,6 +217,7 @@ position = Vector2(16, 0)
 
 [node name="weapon_test" type="Sprite2D" parent="weapon_root/weapon_node"]
 y_sort_enabled = true
+position = Vector2(-4, 2)
 scale = Vector2(0.513, 0.5)
 texture = ExtResource("3_oth3e")
 hframes = 2
